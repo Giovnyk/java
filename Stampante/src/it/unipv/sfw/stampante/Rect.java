@@ -18,4 +18,8 @@ public class Rect extends Forma{
 	public double area() {
 		return base*altezza; 
 	}
+	
+	public Color getColor() {
+		return colore;
+	}
 }
