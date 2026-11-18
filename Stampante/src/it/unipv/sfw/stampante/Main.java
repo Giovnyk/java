@@ -6,23 +6,17 @@ public class Main {
 		Color red = new Color(255, 0, 0);
 		Color green = new Color(0, 255, 0);
 		Color blue = new Color(0, 0, 255);
+		Color c1 = new Color(128, 64, 255);
 
-		Rect[] r1 = {new Rect(15, 10, red)};
+		Rect[] r1 = {new Rect(15, 10, red), new Rect(20, 10, blue), new Rect(20, 10, c1)};
 
 		VectImg img1 = new VectImg(r1);
 
-		Cartuccia cR = new Cartuccia(red);
-		Cartuccia cG = new Cartuccia(green);
-		Cartuccia cB = new Cartuccia(blue);
-
-		Cartuccia[] cartucce = {cR, cG, cB};
+		Stampante s1 = new Stampante();
 		
-		Stampante s1 = new Stampante(cartucce);
+		s1.initStampante();
+		s1.print(img1);
 		
-		
-
-		
-		img1.colorUsage();
 	}
 
 }

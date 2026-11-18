@@ -1,23 +1,22 @@
 package it.unipv.sfw.stampante;
 
 public class Cartuccia {
-	
-	private Color colore;
 	private double level;
 	
-	public Cartuccia(Color colore) {
-		this.colore = colore;
+	public Cartuccia() {
 		this.level = 100000;
 	}
 
-	public Color getColore() {
-		return colore;
-	}
-
-	public void setlevel(double level) {
+	public void setLevel(double level) {
 		this.level = level;
 	}
 
-	
+	public double getLevel() {
+		return level;
+	}
+
+	public void resetLevel() {
+		this.level = 100000;
+	}
 
 }

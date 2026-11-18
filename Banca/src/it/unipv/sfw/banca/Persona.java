@@ -10,4 +10,9 @@ public class Persona {
 		this.cognome = cognome;
 		this.codiceFiscale = codiceFiscale;
 	}
+	
+	public String getcodiceFiscale() {
+		return codiceFiscale;
+	}
+	
 }

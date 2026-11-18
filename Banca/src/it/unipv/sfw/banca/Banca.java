@@ -3,18 +3,18 @@ package it.unipv.sfw.banca;
 public class Banca {
 	private String nome;
 	private int maxConti;
-	private Conto conti[];
+	private ContoCorrente conti[];
 	private int contiAttivi;
 	private String radIban;
 	
 	public Banca(String nome, int maxConti) {
 		this.nome = nome;
 		this.maxConti = maxConti;
-		conti = new Conto[maxConti];
+		conti = new ContoCorrente[maxConti];
 	}
 	
-	public Conto addConto(String nome, String cognome, String codiceFiscale, String iban) {
-		conti[contiAttivi] = new Conto(iban, new Persona(nome, cognome, codiceFiscale));
+	public ContoCorrente addConto(String nome, String cognome, String codiceFiscale, String iban) {
+		conti[contiAttivi] = new ContoCorrente(iban, new Persona(nome, cognome, codiceFiscale));
 		contiAttivi++;	
 		return conti[contiAttivi - 1];
 	}
@@ -27,7 +27,7 @@ public class Banca {
 		return totSaldi;
 	}
 	
-	public Conto getConto(String iban) {
+	public ContoCorrente getConto(String iban) {
 		for (int i = 0; i < conti.length; i++) {
 			if (conti[i].getIban() == iban) { return conti[i]; }
 		}
